@@ -1,19 +1,33 @@
 
-# Client-Server Application
+# C Client-Server Application
 
 ## Description
-This project is a client-server application implemented in C. The server application listens for incoming connections on a specified port and handles client requests. The client application connects to the server, sends requests, and receives responses.
+This project is a simple client-server application written in C that utilizes Windows named pipes for inter-process communication. The server application creates a named pipe and listens for client connections. The client sends data to the server, which is then read and displayed.
 
 ## Technologies Used
 - C
-- POSIX threads (for handling concurrency)
-- Sockets (for network communication)
+- Windows API (Named Pipes)
 
+## Installation
 
 ### Prerequisites
-- GCC (GNU Compiler Collection)
-- Make utility
+- A Windows operating system
+- GCC compiler (MinGW) or Microsoft Visual Studio
 
+### Setup Instructions
+1. Clone the repository:
+    ```bash
+    git clone <repository-url>
+    cd <repository-directory>
+    ```
+
+2. Build the project:
+    ```bash
+    gcc -o server server.c
+    gcc -o client client.c
+    ```
+
+## Usage
 
 ### How to Compile
 To compile the server and client applications, use the following commands:
